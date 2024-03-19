@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'Theme.dart';
 import "ThemeNotifier.dart";
@@ -75,10 +72,7 @@ class HomePage extends StatelessWidget {
                   IconButton(
                       onPressed: () {}, icon: Image.asset("assets/logo1.png")),
                   IconButton(
-                      onPressed: () {
-                        themeNotifier.toggleTheme();
-                      },
-                      icon: Image.asset("assets/logo2.png"))
+                      onPressed: () {}, icon: Image.asset("assets/logo2.png"))
                 ],
               ),
             ),
@@ -146,6 +140,9 @@ class HomePage extends StatelessWidget {
                         gradient: LinearGradient(
                           colors: [
                             Color.fromARGB(156, 156, 185, 221),
+                            Color.fromARGB(156, 156, 185, 221),
+                            Color.fromARGB(255, 255, 255, 255),
+                            Color.fromARGB(255, 255, 255, 255),
                             Color.fromARGB(255, 255, 255, 255),
                           ],
                           begin: Alignment.centerRight,
@@ -270,7 +267,7 @@ class HomePage extends StatelessWidget {
                                                 children: [
                                                   Image.asset(
                                                     'assets/logo7.png',
-                                                    scale: width / 150,
+                                                    scale: width / 250,
                                                   ),
                                                   const Text(
                                                     " 4.9",
@@ -341,10 +338,9 @@ class HomePage extends StatelessWidget {
                     height: 20,
                   ),
                   Container(
-                    color: Colors.amber,
                     alignment: Alignment.center,
                     width: width * 4.7 / 5,
-                    height: height * 3 / 4,
+                    height: height * 4 / 5,
                     child: Column(
                       children: [
                         SizedBox(
@@ -362,7 +358,7 @@ class HomePage extends StatelessWidget {
                                     ),
                                   )),
                               Positioned(
-                                  top: height / 40,
+                                  top: height / 80,
                                   right: 0,
                                   child: Container(
                                       height: height / 6,
@@ -378,30 +374,388 @@ class HomePage extends StatelessWidget {
                                             const Align(
                                               alignment: Alignment.topLeft,
                                               child: CircleAvatar(
-                                                radius: 30,
-                                                backgroundImage:
-                                                    AssetImage('image14-1.png'),
+                                                radius: 25,
+                                                backgroundImage: AssetImage(
+                                                    'assets/image14-1.png'),
                                               ),
                                             ),
                                             const SizedBox(width: 10),
                                             Expanded(
                                               child: Column(
+                                                mainAxisSize: MainAxisSize.min,
                                                 crossAxisAlignment:
                                                     CrossAxisAlignment.start,
                                                 children: [
                                                   Text(
                                                     "Miss Zachary Will",
                                                     style: TextStyle(
-                                                        fontSize: height / 45,
+                                                        fontSize: height / 50,
                                                         fontWeight:
                                                             FontWeight.w500),
                                                   ),
                                                   Text(
                                                     "Beautician",
                                                     style: TextStyle(
+                                                        fontSize: height / 70,
                                                         color: const Color
                                                             .fromARGB(255, 130,
                                                             123, 235)),
+                                                  ),
+                                                  Text(
+                                                    "Doloribus saepe aut necessit qui non qui.",
+                                                    style: TextStyle(
+                                                        fontSize: height / 80,
+                                                        color: const Color
+                                                            .fromARGB(255, 107,
+                                                            107, 107)),
+                                                  ),
+                                                  const SizedBox(
+                                                    height: 15,
+                                                  ),
+                                                  Row(
+                                                    children: [
+                                                      Container(
+                                                        width: width / 7,
+                                                        height: height / 30,
+                                                        decoration: BoxDecoration(
+                                                            color: const Color
+                                                                .fromARGB(20,
+                                                                130, 123, 235),
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        40)),
+                                                        child: Row(
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .center,
+                                                          children: [
+                                                            Image.asset(
+                                                              'assets/logo7.png',
+                                                              scale:
+                                                                  width / 200,
+                                                            ),
+                                                            Text(
+                                                              " 4.9",
+                                                              style: TextStyle(
+                                                                  fontSize:
+                                                                      height /
+                                                                          60,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600),
+                                                            )
+                                                          ],
+                                                        ),
+                                                      ),
+                                                      const SizedBox(
+                                                        width: 10,
+                                                      ),
+                                                      Container(
+                                                        alignment:
+                                                            Alignment.center,
+                                                        width: width / 6,
+                                                        height: height / 30,
+                                                        decoration: BoxDecoration(
+                                                            color: const Color
+                                                                .fromARGB(255,
+                                                                130, 123, 235),
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        10)),
+                                                        child: Text(
+                                                          "Book Now",
+                                                          style: TextStyle(
+                                                              fontSize:
+                                                                  height / 70,
+                                                              color:
+                                                                  Colors.white),
+                                                        ),
+                                                      )
+                                                    ],
+                                                  )
+                                                ],
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      )))
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: height / 4,
+                          child: Stack(
+                            children: [
+                              Positioned(
+                                  left: 0,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20),
+                                    child: Image.asset(
+                                      "assets/image13-2.png",
+                                      fit: BoxFit.fill,
+                                      width: width / 2,
+                                    ),
+                                  )),
+                              Positioned(
+                                  top: height / 80,
+                                  right: 0,
+                                  child: Container(
+                                      height: height / 6,
+                                      width: width * 1.1 / 2,
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius:
+                                              BorderRadius.circular(15)),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Row(
+                                          children: [
+                                            const Align(
+                                              alignment: Alignment.topLeft,
+                                              child: CircleAvatar(
+                                                radius: 25,
+                                                backgroundImage: AssetImage(
+                                                    'assets/image14-1.png'),
+                                              ),
+                                            ),
+                                            const SizedBox(width: 10),
+                                            Expanded(
+                                              child: Column(
+                                                mainAxisSize: MainAxisSize.min,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                    "Miss Zachary Will",
+                                                    style: TextStyle(
+                                                        fontSize: height / 50,
+                                                        fontWeight:
+                                                            FontWeight.w500),
+                                                  ),
+                                                  Text(
+                                                    "Beautician",
+                                                    style: TextStyle(
+                                                        fontSize: height / 70,
+                                                        color: const Color
+                                                            .fromARGB(255, 130,
+                                                            123, 235)),
+                                                  ),
+                                                  Text(
+                                                    "Doloribus saepe aut necessit qui non qui.",
+                                                    style: TextStyle(
+                                                        fontSize: height / 80,
+                                                        color: const Color
+                                                            .fromARGB(255, 107,
+                                                            107, 107)),
+                                                  ),
+                                                  const SizedBox(
+                                                    height: 15,
+                                                  ),
+                                                  Row(
+                                                    children: [
+                                                      Container(
+                                                        width: width / 7,
+                                                        height: height / 30,
+                                                        decoration: BoxDecoration(
+                                                            color: const Color
+                                                                .fromARGB(20,
+                                                                130, 123, 235),
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        40)),
+                                                        child: Row(
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .center,
+                                                          children: [
+                                                            Image.asset(
+                                                              'assets/logo7.png',
+                                                              scale:
+                                                                  width / 200,
+                                                            ),
+                                                            Text(
+                                                              " 4.9",
+                                                              style: TextStyle(
+                                                                  fontSize:
+                                                                      height /
+                                                                          60,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600),
+                                                            )
+                                                          ],
+                                                        ),
+                                                      ),
+                                                      const SizedBox(
+                                                        width: 10,
+                                                      ),
+                                                      Container(
+                                                        alignment:
+                                                            Alignment.center,
+                                                        width: width / 6,
+                                                        height: height / 30,
+                                                        decoration: BoxDecoration(
+                                                            color: const Color
+                                                                .fromARGB(255,
+                                                                130, 123, 235),
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        10)),
+                                                        child: Text(
+                                                          "Book Now",
+                                                          style: TextStyle(
+                                                              fontSize:
+                                                                  height / 70,
+                                                              color:
+                                                                  Colors.white),
+                                                        ),
+                                                      )
+                                                    ],
+                                                  )
+                                                ],
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      )))
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: height / 4,
+                          child: Stack(
+                            children: [
+                              Positioned(
+                                  left: 0,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(20),
+                                    child: Image.asset(
+                                      "assets/image13-3.png",
+                                      fit: BoxFit.fill,
+                                      width: width / 2,
+                                    ),
+                                  )),
+                              Positioned(
+                                  top: height / 80,
+                                  right: 0,
+                                  child: Container(
+                                      height: height / 6,
+                                      width: width * 1.1 / 2,
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius:
+                                              BorderRadius.circular(15)),
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Row(
+                                          children: [
+                                            const Align(
+                                              alignment: Alignment.topLeft,
+                                              child: CircleAvatar(
+                                                radius: 25,
+                                                backgroundImage: AssetImage(
+                                                    'assets/image14-1.png'),
+                                              ),
+                                            ),
+                                            const SizedBox(width: 10),
+                                            Expanded(
+                                              child: Column(
+                                                mainAxisSize: MainAxisSize.min,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                children: [
+                                                  Text(
+                                                    "Miss Zachary Will",
+                                                    style: TextStyle(
+                                                        fontSize: height / 50,
+                                                        fontWeight:
+                                                            FontWeight.w500),
+                                                  ),
+                                                  Text(
+                                                    "Beautician",
+                                                    style: TextStyle(
+                                                        fontSize: height / 70,
+                                                        color: const Color
+                                                            .fromARGB(255, 130,
+                                                            123, 235)),
+                                                  ),
+                                                  Text(
+                                                    "Doloribus saepe aut necessit qui non qui.",
+                                                    style: TextStyle(
+                                                        fontSize: height / 80,
+                                                        color: const Color
+                                                            .fromARGB(255, 107,
+                                                            107, 107)),
+                                                  ),
+                                                  const SizedBox(
+                                                    height: 15,
+                                                  ),
+                                                  Row(
+                                                    children: [
+                                                      Container(
+                                                        width: width / 7,
+                                                        height: height / 30,
+                                                        decoration: BoxDecoration(
+                                                            color: const Color
+                                                                .fromARGB(20,
+                                                                130, 123, 235),
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        40)),
+                                                        child: Row(
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .center,
+                                                          children: [
+                                                            Image.asset(
+                                                              'assets/logo7.png',
+                                                              scale:
+                                                                  width / 200,
+                                                            ),
+                                                            Text(
+                                                              " 4.9",
+                                                              style: TextStyle(
+                                                                  fontSize:
+                                                                      height /
+                                                                          60,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600),
+                                                            )
+                                                          ],
+                                                        ),
+                                                      ),
+                                                      const SizedBox(
+                                                        width: 10,
+                                                      ),
+                                                      Container(
+                                                        alignment:
+                                                            Alignment.center,
+                                                        width: width / 6,
+                                                        height: height / 30,
+                                                        decoration: BoxDecoration(
+                                                            color: const Color
+                                                                .fromARGB(255,
+                                                                130, 123, 235),
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(
+                                                                        10)),
+                                                        child: Text(
+                                                          "Book Now",
+                                                          style: TextStyle(
+                                                              fontSize:
+                                                                  height / 70,
+                                                              color:
+                                                                  Colors.white),
+                                                        ),
+                                                      )
+                                                    ],
                                                   )
                                                 ],
                                               ),
